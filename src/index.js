@@ -7,6 +7,7 @@ import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import {Link} from 'react-router-dom'
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
+import MovieUpcomingsPage from "./pages/movieUpcomingsPage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <SiteHeader />      {/* New Header  */}
           <Routes>
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
+        <Route path="movies/upcoming" element={ <MovieUpcomingsPage /> } />
         <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/" element={<HomePage />} />
