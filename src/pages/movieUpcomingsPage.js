@@ -4,11 +4,13 @@ import PageTemplate from '../components/templateMovieListPage';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
-import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+// import AddToPlaylistIcon from '../components/cardIcons/addToMustWatch';
+import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
+
 
 const UpcomingPage = (props) => {
 
-  const {  data, error, isLoading, isError }  = useQuery('discover', getUpcoming)
+  const {  data, error, isLoading, isError }  = useQuery('upcoming', getUpcoming)
 
   if (isLoading) {
     return <Spinner />

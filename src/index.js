@@ -2,7 +2,9 @@ import React from "react";
 import {createRoot} from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
+import ActorsPage from "./pages/actorsPage";
 import MoviePage from "./pages/movieDetailsPage";
+import ActorPage from "./pages/actorDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import {Link} from 'react-router-dom'
 import MovieReviewPage from "./pages/movieReviewPage";
@@ -33,11 +35,13 @@ const App = () => {
             <Routes>
             <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
             <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
-        <Route path="movies/upcoming" element={ <MovieUpcomingsPage /> } />
-        <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
-        <Route path="/movies/:id" element={<MoviePage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="*" element={ <Navigate to="/" /> } />
+            <Route path="/actors/" element={ <ActorsPage /> } />
+            <Route path="movies/upcoming" element={ <MovieUpcomingsPage /> } />
+            <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
+            <Route path="/movies/:id" element={<MoviePage />} />
+            <Route path="/actors/:id" element={<ActorPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="*" element={ <Navigate to="/" /> } />
             </Routes>
         </MoviesContextProvider>
       </BrowserRouter>
