@@ -6,7 +6,7 @@ const ActorsContextProvider = (props) => {
   const [favouriteActors, setFavouriteActors] = useState( [] )
   
 
-  const addToFavouriteActors = (movie) => {
+  const addToFavouriteActors = (actor) => {
     let newFavouriteActors = [...favouriteActors];
     if (!favouriteActors.includes(actor.id)) {
       newFavouriteActors.push(actor.id);
@@ -14,7 +14,7 @@ const ActorsContextProvider = (props) => {
     setFavouriteActors(newFavouriteActors);
   };
 
-  const removeFromFavouriteActors = (movie) => {
+  const removeFromFavouriteActors = (actor) => {
     setFavouriteActors( favouriteActors.filter(
       (aId) => aId !== actor.id
     ) )
