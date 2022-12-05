@@ -7,7 +7,7 @@ import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 
 const ActorsPage = (props) => {
 
-  const {  data, error, isLoading, isError }  = useQuery('discover', getActors)
+  const {  data, error, isLoading, isError }  = useQuery('actor', getActors)
 
   if (isLoading) {
     return <Spinner />

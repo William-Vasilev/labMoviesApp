@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PageTemplate from "../components/templateTvListPage";
-import { TVsContext } from "../contexts/TVsContext";
+import { TVsContext } from "../contexts/tvsContext";
 import { useQueries } from "react-query";
 import { getTV } from "../api/tmdb-api";
 import Spinner from '../components/spinner'

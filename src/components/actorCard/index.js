@@ -17,37 +17,37 @@ import Avatar from '@mui/material/Avatar';
 import { ActorsContext } from "../../contexts/actorContext";
 
 export default function ActorCard({ actor, action }) {
-  const { favouriteActors, addToFavouriteActors } = useContext(ActorsContext);
+  //const { favouriteActors, addToFavouriteActors } = useContext(ActorsContext);
  
-   if (favouriteActors.find((id) => id === actor.id)) {
-     actor.favouriteActors = true;
-   } else {
-    actor.favouriteActors = false
-   }
+  //  if (favouriteActors.find((id) => id === actor.id)) {
+  //    actor.favouriteActors = true;
+  //  } else {
+  //   actor.favouriteActors = false
+  //  }
  
-   const handleAddToFavouriteActors = (e) => {
-     e.preventDefault();
-     addToFavouriteActors(actor);
-   };
+  //  const handleAddToFavouriteActors = (e) => {
+  //    e.preventDefault();
+  //    addToFavouriteActors(actor);
+  //  };
  
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-            actor.favouriteActors ? (
-            <Avatar sx={{ backgroundColor: 'red' }}>
-              <FavoriteIcon />
-            </Avatar>
-          ) : null
-        }
+        // avatar={
+        //     actor.favouriteActors ? (
+        //     <Avatar sx={{ backgroundColor: 'red' }}>
+        //       <FavoriteIcon />
+        //     </Avatar>
+        //   ) : null
+        // }
     
       />
       <CardMedia
         sx={{ height: 500 }}
         image={
-            actor.poster_path
-            ? `https://image.tmdb.org/t/p/w500/${actor.image_path}`
+            actor.profile_path
+            ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
             : img
         }
       />
